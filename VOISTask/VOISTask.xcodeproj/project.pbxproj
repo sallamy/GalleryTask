@@ -7,20 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		747B00CE27728FDA00368953 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747B00C927728FDA00368953 /* APIRouter.swift */; };
+		747B00CF27728FDA00368953 /* GalleryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747B00CA27728FDA00368953 /* GalleryRepository.swift */; };
+		747B00D027728FDA00368953 /* Alert Extenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747B00CC27728FDA00368953 /* Alert Extenstion.swift */; };
+		747B00D127728FDA00368953 /* UIView Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747B00CD27728FDA00368953 /* UIView Constraints.swift */; };
+		747B00D9277296DE00368953 /* VOISTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747B00D8277296DE00368953 /* VOISTaskTests.swift */; };
+		747B00E3277298B600368953 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747B00E2277298B600368953 /* GalleryViewController.swift */; };
+		747B00E5277298C700368953 /* PhotoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747B00E4277298C700368953 /* PhotoDetailsViewController.swift */; };
+		747B00E72772992100368953 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747B00E62772992100368953 /* Photo.swift */; };
 		74D3176F277092CE003992A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D3176E277092CE003992A8 /* AppDelegate.swift */; };
-		74D31773277092CE003992A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D31772277092CE003992A8 /* ViewController.swift */; };
-		74D31776277092CE003992A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74D31774277092CE003992A8 /* Main.storyboard */; };
 		74D31778277092D0003992A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74D31777277092D0003992A8 /* Assets.xcassets */; };
 		74D3177B277092D0003992A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74D31779277092D0003992A8 /* LaunchScreen.storyboard */; };
 		CB66A670318351A2FCC34739 /* Pods_VOISTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 844FE96E4A15E963EAAC1678 /* Pods_VOISTask.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		747B00DA277296DE00368953 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 74D31763277092CE003992A8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 74D3176A277092CE003992A8;
+			remoteInfo = VOISTask;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		6BB5617F38BAC1E99731D9A6 /* Pods-VOISTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VOISTask.debug.xcconfig"; path = "Target Support Files/Pods-VOISTask/Pods-VOISTask.debug.xcconfig"; sourceTree = "<group>"; };
+		747B00C927728FDA00368953 /* APIRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
+		747B00CA27728FDA00368953 /* GalleryRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryRepository.swift; sourceTree = "<group>"; };
+		747B00CC27728FDA00368953 /* Alert Extenstion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Alert Extenstion.swift"; sourceTree = "<group>"; };
+		747B00CD27728FDA00368953 /* UIView Constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView Constraints.swift"; sourceTree = "<group>"; };
+		747B00D6277296DE00368953 /* VOISTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VOISTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		747B00D8277296DE00368953 /* VOISTaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VOISTaskTests.swift; sourceTree = "<group>"; };
+		747B00E2277298B600368953 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
+		747B00E4277298C700368953 /* PhotoDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailsViewController.swift; sourceTree = "<group>"; };
+		747B00E62772992100368953 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		74D3176B277092CE003992A8 /* VOISTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VOISTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74D3176E277092CE003992A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		74D31772277092CE003992A8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		74D31775277092CE003992A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		74D31777277092D0003992A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		74D3177A277092D0003992A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		74D3177C277092D0003992A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -29,6 +52,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		747B00D3277296DE00368953 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		74D31768277092CE003992A8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -54,14 +84,64 @@
 				6BB5617F38BAC1E99731D9A6 /* Pods-VOISTask.debug.xcconfig */,
 				768534F023405FF42A555513 /* Pods-VOISTask.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		747B00C827728FDA00368953 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				747B00C927728FDA00368953 /* APIRouter.swift */,
+				747B00CA27728FDA00368953 /* GalleryRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		747B00CB27728FDA00368953 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				747B00CC27728FDA00368953 /* Alert Extenstion.swift */,
+				747B00CD27728FDA00368953 /* UIView Constraints.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		747B00D7277296DE00368953 /* VOISTaskTests */ = {
+			isa = PBXGroup;
+			children = (
+				747B00D8277296DE00368953 /* VOISTaskTests.swift */,
+			);
+			path = VOISTaskTests;
+			sourceTree = "<group>";
+		};
+		747B00DF2772973500368953 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				747B00E2277298B600368953 /* GalleryViewController.swift */,
+				747B00E4277298C700368953 /* PhotoDetailsViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		747B00E02772973900368953 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				747B00E62772992100368953 /* Photo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		747B00E12772973F00368953 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		74D31762277092CE003992A8 = {
 			isa = PBXGroup;
 			children = (
 				74D3176D277092CE003992A8 /* VOISTask */,
+				747B00D7277296DE00368953 /* VOISTaskTests */,
 				74D3176C277092CE003992A8 /* Products */,
 				1C4451681E019A5895D8B40A /* Pods */,
 				04270165BCB44FB586FABC83 /* Frameworks */,
@@ -72,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				74D3176B277092CE003992A8 /* VOISTask.app */,
+				747B00D6277296DE00368953 /* VOISTaskTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -79,9 +160,12 @@
 		74D3176D277092CE003992A8 /* VOISTask */ = {
 			isa = PBXGroup;
 			children = (
+				747B00E12772973F00368953 /* ViewModel */,
+				747B00E02772973900368953 /* Model */,
+				747B00DF2772973500368953 /* View */,
+				747B00CB27728FDA00368953 /* Extensions */,
+				747B00C827728FDA00368953 /* Repository */,
 				74D3176E277092CE003992A8 /* AppDelegate.swift */,
-				74D31772277092CE003992A8 /* ViewController.swift */,
-				74D31774277092CE003992A8 /* Main.storyboard */,
 				74D31777277092D0003992A8 /* Assets.xcassets */,
 				74D31779277092D0003992A8 /* LaunchScreen.storyboard */,
 				74D3177C277092D0003992A8 /* Info.plist */,
@@ -92,6 +176,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		747B00D5277296DE00368953 /* VOISTaskTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 747B00DC277296DE00368953 /* Build configuration list for PBXNativeTarget "VOISTaskTests" */;
+			buildPhases = (
+				747B00D2277296DE00368953 /* Sources */,
+				747B00D3277296DE00368953 /* Frameworks */,
+				747B00D4277296DE00368953 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				747B00DB277296DE00368953 /* PBXTargetDependency */,
+			);
+			name = VOISTaskTests;
+			productName = VOISTaskTests;
+			productReference = 747B00D6277296DE00368953 /* VOISTaskTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		74D3176A277092CE003992A8 /* VOISTask */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 74D3177F277092D0003992A8 /* Build configuration list for PBXNativeTarget "VOISTask" */;
@@ -121,6 +223,10 @@
 				LastSwiftUpdateCheck = 1310;
 				LastUpgradeCheck = 1310;
 				TargetAttributes = {
+					747B00D5277296DE00368953 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = 74D3176A277092CE003992A8;
+					};
 					74D3176A277092CE003992A8 = {
 						CreatedOnToolsVersion = 13.1;
 					};
@@ -140,18 +246,25 @@
 			projectRoot = "";
 			targets = (
 				74D3176A277092CE003992A8 /* VOISTask */,
+				747B00D5277296DE00368953 /* VOISTaskTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		747B00D4277296DE00368953 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		74D31769277092CE003992A8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				74D3177B277092D0003992A8 /* LaunchScreen.storyboard in Resources */,
 				74D31778277092D0003992A8 /* Assets.xcassets in Resources */,
-				74D31776277092CE003992A8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,26 +313,40 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		747B00D2277296DE00368953 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				747B00D9277296DE00368953 /* VOISTaskTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		74D31767277092CE003992A8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74D31773277092CE003992A8 /* ViewController.swift in Sources */,
+				747B00E72772992100368953 /* Photo.swift in Sources */,
+				747B00E5277298C700368953 /* PhotoDetailsViewController.swift in Sources */,
+				747B00D127728FDA00368953 /* UIView Constraints.swift in Sources */,
+				747B00CE27728FDA00368953 /* APIRouter.swift in Sources */,
+				747B00CF27728FDA00368953 /* GalleryRepository.swift in Sources */,
+				747B00E3277298B600368953 /* GalleryViewController.swift in Sources */,
+				747B00D027728FDA00368953 /* Alert Extenstion.swift in Sources */,
 				74D3176F277092CE003992A8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		74D31774277092CE003992A8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				74D31775277092CE003992A8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
+/* Begin PBXTargetDependency section */
+		747B00DB277296DE00368953 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 74D3176A277092CE003992A8 /* VOISTask */;
+			targetProxy = 747B00DA277296DE00368953 /* PBXContainerItemProxy */;
 		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
 		74D31779277092D0003992A8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -231,6 +358,50 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		747B00DD277296DE00368953 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = VOIS.VOISTaskTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VOISTask.app/VOISTask";
+			};
+			name = Debug;
+		};
+		747B00DE277296DE00368953 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = VOIS.VOISTaskTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VOISTask.app/VOISTask";
+			};
+			name = Release;
+		};
 		74D3177D277092D0003992A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -406,6 +577,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		747B00DC277296DE00368953 /* Build configuration list for PBXNativeTarget "VOISTaskTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				747B00DD277296DE00368953 /* Debug */,
+				747B00DE277296DE00368953 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		74D31766277092CE003992A8 /* Build configuration list for PBXProject "VOISTask" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
