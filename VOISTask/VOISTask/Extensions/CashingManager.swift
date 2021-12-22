@@ -8,6 +8,8 @@
 import Foundation
 
 final class CashingManager {
+    
+    // MARK: - save photo
     class func save(photos: [Photo]){
         do {
             let encoder = JSONEncoder()
@@ -19,6 +21,7 @@ final class CashingManager {
         }
     }
     
+    // MARK: - get photo
     class func getPhotos() -> [Photo] {
         do {
             let decoder = JSONDecoder()
@@ -31,7 +34,7 @@ final class CashingManager {
         }
         return []
     }
-    
+    // MARK: - Clear
     class func  clear() {
         UserDefaults.standard.removeObject(forKey: "photos")
     }
