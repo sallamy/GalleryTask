@@ -86,6 +86,9 @@ class PhotoTableViewCell: UITableViewCell {
             self.indicatorView.isHidden = false
             randomImageView.sd_setImage(with: photoURL) { [weak self] image, error, type, url in
                 guard let self = self else {  return}
+                if (error != nil) {
+                    print("errrrror")
+                }
                 self.indicatorView.stopAnimating()
                 self.indicatorView.isHidden = true
             }

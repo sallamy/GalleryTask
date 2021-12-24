@@ -14,7 +14,8 @@ final class GalleryViewModel {
     let photos: BehaviorRelay<[PhotoViewData]> = BehaviorRelay(value: [])
     let isLoading = BehaviorRelay<Bool>(value: false)
     var pageIndex = 1
-    
+    var fromCashing = false
+    // MARK: - CallApi
     func getPhotos(){
         self.isLoading.accept(true)
         GalleryRepository.getPhotos(pageIndex: pageIndex) { [weak self] success, error, photos in
@@ -23,7 +24,11 @@ final class GalleryViewModel {
             if success {
                 self.pageIndex += 1
                 self.photos.accept(self.photos.value + (photos ?? []))
+            }else  {
+                self.fromCashing = true
+                self.photos.accept(photos ?? [])
             }
         }
     }
+    
 }

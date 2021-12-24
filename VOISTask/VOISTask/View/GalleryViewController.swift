@@ -91,7 +91,7 @@ extension GalleryViewController {
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if (self.viewModel.photos.value.count - 2) == indexPath.row  {
+        if (self.viewModel.photos.value.count - 2) == indexPath.row && viewModel.fromCashing == false  {
             self.viewModel.getPhotos()
         }
     }
