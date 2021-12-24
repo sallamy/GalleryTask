@@ -25,6 +25,22 @@ class PhotoTableViewCell: UITableViewCell {
         logo.contentMode = .scaleAspectFit
         return logo
     }()
+    
+    lazy var adBannerLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Ad Banner"
+        label.lineBreakMode = .byTruncatingTail
+        label.textColor = UIColor.darkGray
+        label.textAlignment = .justified
+        return label
+    }()
+    
+    lazy var adBannerView: UIView = {
+        let adView = UIView()
+        adView.backgroundColor = UIColor.lightGray
+        return adView
+    }()
+    
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -38,18 +54,31 @@ class PhotoTableViewCell: UITableViewCell {
     func buildUI(){
         self.backgroundColor  = UIColor.white
         self.selectionStyle = .none
-        self.addSubview(nameLabel)
-        self.addSubview(randomImageView)
-        randomImageView.setConstraints(top: self.topAnchor, leading: self.leadingAnchor, trailing: self.trailingAnchor , paddingTop: 10, paddingLeading: 16,paddingTrailing: 16)
-        
-        nameLabel.setConstraints(top: randomImageView.bottomAnchor, leading: self.leadingAnchor, trailing: self.trailingAnchor , paddingTop: 10, paddingLeading: 16,paddingTrailing: 16)
-        
+        let stack = UIStackView()
+        stack.spacing = 5
+        stack.distribution = .fill
+        stack.axis = .vertical
+        stack.addArrangedSubview(randomImageView)
+        stack.addArrangedSubview(nameLabel)
+        stack.addArrangedSubview(adBannerView)
+
+        randomImageView.setConstraints(height: 200)
+        adBannerView.setConstraints(height: 100)
+        adBannerView.addSubview(adBannerLabel)
+        adBannerView.setConstraints( centerX: adBannerView.centerXAnchor, centerY: adBannerView.centerYAnchor)
+        self.addSubview(stack)
+        stack.setConstraints(top: self.topAnchor, leading: self.leadingAnchor, trailing: self.trailingAnchor)
     }
  
-    func setupData(model: PhotoViewData){
+    func setupData(model: PhotoViewData, index: Int){
         nameLabel.text = model.authorName
         if let photoURL =  URL(string: model.photoURL){
             randomImageView.sd_setImage(with: photoURL, placeholderImage: nil)
+        }
+        if index%5 == 0 {
+            self.adBannerView.isHidden = false
+        }else {
+            self.adBannerView.isHidden = true
         }
     }
 }
