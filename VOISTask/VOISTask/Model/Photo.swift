@@ -27,6 +27,6 @@ extension Photo: PhotoViewData {
     }
     
     var photoURL: String {
-        return url ?? ""
+        return download_url ?? ""
     }
 }

@@ -11,7 +11,7 @@ import RxRelay
 
 final class GalleryViewModel {
     
-    let photos: BehaviorRelay<[PhotoViewData]?> = BehaviorRelay(value: nil)
+    let photos: BehaviorRelay<[PhotoViewData]> = BehaviorRelay(value: [])
     let isLoading = BehaviorRelay<Bool>(value: false)
     var pageIndex = 1
     
@@ -22,7 +22,7 @@ final class GalleryViewModel {
             self.isLoading.accept(false)
             if success {
                 self.pageIndex += 1
-                self.photos.accept(photos)
+                self.photos.accept(self.photos.value + (photos ?? []))
             }
         }
     }

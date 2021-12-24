@@ -11,6 +11,14 @@ import SDWebImage
 class PhotoTableViewCell: UITableViewCell {
     static let idenetifier = "PhotoTableViewCell"
     
+    lazy var indicatorView: UIActivityIndicatorView = {
+        let view = UIActivityIndicatorView(style: .medium)
+        view.color = .darkGray
+        view.startAnimating()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
     lazy var nameLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
@@ -19,7 +27,7 @@ class PhotoTableViewCell: UITableViewCell {
         label.textAlignment = .justified
         return label
     }()
-  
+    
     lazy var randomImageView: UIImageView = {
         let logo = UIImageView()
         logo.contentMode = .scaleAspectFit
@@ -41,11 +49,11 @@ class PhotoTableViewCell: UITableViewCell {
         return adView
     }()
     
-
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
-
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         buildUI()
@@ -61,19 +69,26 @@ class PhotoTableViewCell: UITableViewCell {
         stack.addArrangedSubview(randomImageView)
         stack.addArrangedSubview(nameLabel)
         stack.addArrangedSubview(adBannerView)
-
+        randomImageView.addSubview(indicatorView)
+        indicatorView.setConstraints( centerX: randomImageView.centerXAnchor, centerY: randomImageView.centerYAnchor)
         randomImageView.setConstraints(height: 200)
         adBannerView.setConstraints(height: 100)
         adBannerView.addSubview(adBannerLabel)
-        adBannerView.setConstraints( centerX: adBannerView.centerXAnchor, centerY: adBannerView.centerYAnchor)
+        adBannerLabel.setConstraints( centerX: adBannerView.centerXAnchor, centerY: adBannerView.centerYAnchor)
         self.addSubview(stack)
-        stack.setConstraints(top: self.topAnchor, leading: self.leadingAnchor, trailing: self.trailingAnchor)
+        stack.setConstraints(top: self.topAnchor,bottom: self.bottomAnchor, leading: self.leadingAnchor, trailing: self.trailingAnchor,paddingTop: 10,paddingBottom: 10)
     }
- 
+    
     func setupData(model: PhotoViewData, index: Int){
         nameLabel.text = model.authorName
         if let photoURL =  URL(string: model.photoURL){
-            randomImageView.sd_setImage(with: photoURL, placeholderImage: nil)
+            self.indicatorView.startAnimating()
+            self.indicatorView.isHidden = false
+            randomImageView.sd_setImage(with: photoURL) { [weak self] image, error, type, url in
+                guard let self = self else {  return}
+                self.indicatorView.stopAnimating()
+                self.indicatorView.isHidden = true
+            }
         }
         if index%5 == 0 {
             self.adBannerView.isHidden = false
