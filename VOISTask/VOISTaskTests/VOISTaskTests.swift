@@ -6,27 +6,47 @@
 //
 
 import XCTest
+@testable import VOISTask
 
 class VOISTaskTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        measure {
-            // Put the code you want to measure the time of here.
+    
+    
+    
+    func testDecodingPhotoModel()  {
+        let jsonPhoto = [
+            "id":"0",
+            "author":"Alejandro Escamilla",
+            "width":5616,
+            "height":3744,
+            "url":"https://unsplash.com/photos/yC-Yzbqy7PY",
+            "download_url":"https://picsum.photos/id/0/5616/3744" ] as [String : Any]
+      
+        do {
+            let photoData = try jsonPhoto.toData(options: .prettyPrinted)
+            let photoModel = try JSONDecoder().decode(Photo.self, from: photoData)
+            XCTAssertNotNil(photoModel)
+            
+        } catch  {
+        
         }
     }
+    
+    func testApi() {
+        let expectation = self.expectation(description: "Response Come")
+        var resultPhotos: [PhotoViewData]?
+        GalleryRepository.getPhotos(pageIndex: 1) {  success, error, photos in
+            resultPhotos = photos
+            expectation.fulfill()
+        }
+        waitForExpectations(timeout: 5, handler: nil)
+        XCTAssertNotNil(resultPhotos)
+    }
+    
+    
+}
 
+extension Dictionary {
+    func toData(options: JSONSerialization.WritingOptions = []) throws -> Data {
+        return try JSONSerialization.data(withJSONObject: self, options: options)
+    }
 }
